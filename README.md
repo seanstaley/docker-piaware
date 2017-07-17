@@ -1,3 +1,5 @@
+**Warning:** This image is built to work on a Raspberry Pi 3 with Docker.
+
 ### Requirements
  * Register a Flightaware account ([flightaware.com](http://flightaware.com))
  * Beast data feed (for instance [seanstaley/rpi-dump1090](https://hub.docker.com/r/seanstaley/rpi-dump1090))
