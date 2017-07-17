@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM resin/rpi-raspbian:jessie
 
 ENV MLAT yes
 
@@ -11,7 +11,7 @@ RUN apt-get -y install wget build-essential debhelper tcl8.6-dev autoconf python
 RUN piaware_builder/sensible-build.sh jessie
 WORKDIR /piaware_builder/package-jessie
 RUN dpkg-buildpackage -b
-RUN apt-get -y install net-tools tcllib tcl-tls itcl3 tclx8.4 init-system-helpers
+RUN apt-get -y install iproute2 net-tools tcllib tcl-tls itcl3 tclx8.4 init-system-helpers
 RUN dpkg -i ../piaware_*.deb
 
 RUN apt-get -y install socat
